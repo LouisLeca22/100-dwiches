@@ -2,6 +2,8 @@ import Layout from '../components/Layout';
 import '../styles/globals.css';
 import store from '../redux/store';
 import { Provider } from 'react-redux';
+import { AppProps } from 'next/app';
+
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -12,5 +14,7 @@ function MyApp({ Component, pageProps }) {
     </Provider>
   );
 }
+
+
 
 export default MyApp;
