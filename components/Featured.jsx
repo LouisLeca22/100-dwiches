@@ -1,6 +1,6 @@
 import styles from "../styles/Featured.module.css";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect} from "react";
 
 const Featured = () => {
   const [index, setIndex] = useState(0);
@@ -18,6 +18,15 @@ const Featured = () => {
           setIndex(index !== 2 ? index+1 : 0)
       }
   }
+
+  useEffect(() => {
+    const play = () => {
+      setIndex(index < 2 ? index + 1 : 0);
+    }
+
+    const interval =  setInterval(play, 3000)
+    return () => clearInterval(interval)
+  },  [index])
 
   return (
     <div className={styles.container}>
