@@ -24,7 +24,7 @@ const Featured = () => {
       setIndex(index < 2 ? index + 1 : 0);
     }
 
-    const interval =  setInterval(play, 3000)
+    const interval =  setInterval(play, 5000)
     return () => clearInterval(interval)
   },  [index])
 
