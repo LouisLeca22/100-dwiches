@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="contact">
       <div className={styles.item}>
         <Image src="/img/bg.jpg" objectFit="cover" layout="fill" alt="" />
       </div>
